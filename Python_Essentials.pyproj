@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f391c9e7-6589-4436-9de3-3300008d3f57}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>Chap2_classes.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Chap1_hello-main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap1_hello-version.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap2_blocks.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap2_classes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap2_functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap2_loops.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exercise Files\Chap01\hello-version.py" />
+    <Compile Include="Exercise Files\Chap01\hello-working.py" />
+    <Compile Include="Exercise Files\Chap01\hello.py" />
+    <Compile Include="Exercise Files\Chap02\blocks.py" />
+    <Compile Include="Exercise Files\Chap02\class.py" />
+    <Compile Include="Exercise Files\Chap02\conditionals.py" />
+    <Compile Include="Exercise Files\Chap02\fibonacci.py" />
+    <Compile Include="Exercise Files\Chap02\for.py" />
+    <Compile Include="Exercise Files\Chap02\function.py" />
+    <Compile Include="Exercise Files\Chap02\hello-cwd.py" />
+    <Compile Include="Exercise Files\Chap02\hello-main.py" />
+    <Compile Include="Exercise Files\Chap02\hello-version.py" />
+    <Compile Include="Exercise Files\Chap02\hello.py" />
+    <Compile Include="Chap2_hello.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exercise Files\Chap02\primes.py" />
+    <Compile Include="Exercise Files\Chap02\statements.py" />
+    <Compile Include="Exercise Files\Chap02\while.py" />
+    <Compile Include="Exercise Files\Chap03\hello.py" />
+    <Compile Include="Exercise Files\Chap03\sequence.py" />
+    <Compile Include="Exercise Files\Chap03\types.py" />
+    <Compile Include="Exercise Files\Chap04\conditional.py" />
+    <Compile Include="Exercise Files\Chap04\hello.py" />
+    <Compile Include="Exercise Files\Chap04\ternary.py" />
+    <Compile Include="Exercise Files\Chap05\arithmetic.py" />
+    <Compile Include="Exercise Files\Chap05\bitwise.py" />
+    <Compile Include="Exercise Files\Chap05\boolean.py" />
+    <Compile Include="Exercise Files\Chap05\comparison.py" />
+    <Compile Include="Exercise Files\Chap05\hello.py" />
+    <Compile Include="Exercise Files\Chap06\for.py" />
+    <Compile Include="Exercise Files\Chap06\hello.py" />
+    <Compile Include="Exercise Files\Chap06\while.py" />
+    <Compile Include="Exercise Files\Chap07\args.py" />
+    <Compile Include="Exercise Files\Chap07\decorator.py" />
+    <Compile Include="Exercise Files\Chap07\function.py" />
+    <Compile Include="Exercise Files\Chap07\generator.py" />
+    <Compile Include="Exercise Files\Chap07\hello.py" />
+    <Compile Include="Exercise Files\Chap07\kwargs.py" />
+    <Compile Include="Exercise Files\Chap08\comprehension.py" />
+    <Compile Include="Exercise Files\Chap08\dict.py" />
+    <Compile Include="Exercise Files\Chap08\hello.py" />
+    <Compile Include="Exercise Files\Chap08\lists.py" />
+    <Compile Include="Exercise Files\Chap08\mixed.py" />
+    <Compile Include="Exercise Files\Chap08\sets.py" />
+    <Compile Include="Exercise Files\Chap09\class.py" />
+    <Compile Include="Exercise Files\Chap09\constructor.py" />
+    <Compile Include="Exercise Files\Chap09\hello.py" />
+    <Compile Include="Exercise Files\Chap09\inheritance.py" />
+    <Compile Include="Exercise Files\Chap09\iterator.py" />
+    <Compile Include="Exercise Files\Chap09\methods.py" />
+    <Compile Include="Exercise Files\Chap09\string.py" />
+    <Compile Include="Exercise Files\Chap09\variables.py" />
+    <Compile Include="Exercise Files\Chap10\exceptions.py" />
+    <Compile Include="Exercise Files\Chap10\hello.py" />
+    <Compile Include="Exercise Files\Chap11\hello.py" />
+    <Compile Include="Exercise Files\Chap11\split-join.py" />
+    <Compile Include="Exercise Files\Chap12\copy-bin.py" />
+    <Compile Include="Exercise Files\Chap12\copy-text.py" />
+    <Compile Include="Exercise Files\Chap12\files.py" />
+    <Compile Include="Exercise Files\Chap12\hello.py" />
+    <Compile Include="Exercise Files\Chap13\hello.py" />
+    <Compile Include="Exercise Files\Chap13\types.py" />
+    <Compile Include="Exercise Files\Chap14\hello.py" />
+    <Compile Include="Exercise Files\Chap14\modules.py" />
+    <Compile Include="Exercise Files\Chap14\saytime-test.py" />
+    <Compile Include="Exercise Files\Chap14\saytime.py" />
+    <Compile Include="Exercise Files\Chap15\bwDB.py" />
+    <Compile Include="Exercise Files\Chap15\db-api.py" />
+    <Compile Include="Exercise Files\Chap15\hello.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\bwCGI.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\bwConfig.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\bwDB.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\bwTL.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\cgi-test.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\db.py" />
+    <Compile Include="Exercise Files\Chap15\jurl\jurl.py" />
+    <Compile Include="Chap1_hello_my.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap2_conditionals.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Exercise Files\Chap12\berlin.jpg" />
+    <Content Include="Exercise Files\Chap12\lines.txt" />
+    <Content Include="Exercise Files\Chap15\jurl\html\db.css" />
+    <Content Include="Exercise Files\Chap15\jurl\html\delconfirm.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\edit.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\footer.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\header.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\index.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\main.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\nextprev.html" />
+    <Content Include="Exercise Files\Chap15\jurl\html\recline.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exercise Files\" />
+    <Folder Include="Exercise Files\Chap01" />
+    <Folder Include="Exercise Files\Chap02" />
+    <Folder Include="Exercise Files\Chap03" />
+    <Folder Include="Exercise Files\Chap04" />
+    <Folder Include="Exercise Files\Chap05" />
+    <Folder Include="Exercise Files\Chap06" />
+    <Folder Include="Exercise Files\Chap07" />
+    <Folder Include="Exercise Files\Chap08" />
+    <Folder Include="Exercise Files\Chap09" />
+    <Folder Include="Exercise Files\Chap10" />
+    <Folder Include="Exercise Files\Chap11" />
+    <Folder Include="Exercise Files\Chap12" />
+    <Folder Include="Exercise Files\Chap13" />
+    <Folder Include="Exercise Files\Chap14" />
+    <Folder Include="Exercise Files\Chap15" />
+    <Folder Include="Exercise Files\Chap15\jurl" />
+    <Folder Include="Exercise Files\Chap15\jurl\html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
