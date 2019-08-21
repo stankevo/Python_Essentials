@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{f391c9e7-6589-4436-9de3-3300008d3f57}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>Chap3_type_and_id.py</StartupFile>
+    <StartupFile>Chap4_conditionals.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -50,6 +50,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Chap3_type_and_id.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap4_conditionals.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Exercise Files\Chap01\hello-version.py" />
