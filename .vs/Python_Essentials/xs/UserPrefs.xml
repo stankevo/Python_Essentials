@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Chap5-Arithmetic_operators.py">
+    <Files>
+      <File FileName="Python_Essentials.pyproj" Line="1" Column="1" />
+      <File FileName="Chap5-Arithmetic_operators.py" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Python_Essentials" expanded="True">
+            <Node name="Python_Essentials" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
