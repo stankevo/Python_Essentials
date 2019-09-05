@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{f391c9e7-6589-4436-9de3-3300008d3f57}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>Chap7_function_arguments1.py</StartupFile>
+    <StartupFile>Chap7_return_values.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -64,6 +64,9 @@
     <Compile Include="Chap6_additional_controls_part2.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Chap7_argument_lists.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Chap7_defining_a_function.py">
       <SubType>Code</SubType>
     </Compile>
@@ -77,6 +80,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Chap7_function_arguments3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap7_keyword_arguments.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap7_return_values.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Exercise Files\Chap01\hello-version.py" />
