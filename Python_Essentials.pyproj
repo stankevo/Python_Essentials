@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{f391c9e7-6589-4436-9de3-3300008d3f57}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>Chap7_return_values.py</StartupFile>
+    <StartupFile>Chap7_generators.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -80,6 +80,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Chap7_function_arguments3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap7_generators.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Chap7_keyword_arguments.py">
