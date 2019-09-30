@@ -22,37 +22,33 @@ def main():
     disp(mixed)
 
 def disp(o):
-    print('[', end = ' ')
-    for i in o: 
-        if   isinstance(o, list): print_list(o)
-        elif isinstance(o, range): print_list(o)
-        elif isinstance(o, set):  print_set(o)
-        elif isinstance(o, dict): print_dict(o)
-        elif isinstance(o, tuple): print_tuple(o)
-        elif o is 'None': print('Nada', end = ' ')
-        else: print(repr(o), end = ' ')
-
-    print(']')
+    if   isinstance(o, list): print_list(o)
+    elif isinstance(o, range): print_list(o)
+    elif isinstance(o, set):  print_set(o)
+    elif isinstance(o, dict): print_dict(o)
+    elif isinstance(o, tuple): print_tuple(o)
+    elif o is 'None': print('Nada', end = ' ')
+    else: print(repr(o), end = ' ')
 
 def print_list(o):
-    print('[', end = ' ')
-    for i in o: print(i, end = ' ')
-    print(']', end = ' ')
+    print('[', end = '')
+    for i in o: disp(i) #print(i, end = ' ')
+    print(']')
 
 def print_set(o):
-    print('{', end = ' ')
-    for i in sorted(o): print(i, end = ' ')
-    print('}', end = ' ')
+    print('{', end = '')
+    for i in sorted(o): disp(i) #print(i, end = ' ')
+    print('}')
 
 def print_tuple(o):
-    print('(', end = ' ')
-    for i in o: print(i, end = ' ')
-    print(')', end = ' ')
+    print('(', end = '')
+    for i in o: disp(i) #print(i, end = ' ')
+    print(')')
 
 def print_dict(o):
-    print('{', end = ' ')
+    print('{', end = '')
     for k,v in o.items(): print(f'{k}: {v}', end = ' ')
-    print('}', end = ' ')
+    print('}')
 
 
 if __name__ == '__main__': main()
