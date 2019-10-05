@@ -1,4 +1,5 @@
 class Animal:
+    x = [1,2,3]
     def __init__(self, **kwargs):
         self._type = kwargs['type'] if 'type' in kwargs else 'unknown anymal'
         self._name = kwargs['name'] if 'name'in kwargs else 'chupakabra'
@@ -27,5 +28,10 @@ def main():
     print(Animal())
     a1.sound('meow')
     print(a1)
+    print()
+    print('Object data:')
+    print(a1.x)
+    a1.x[0] = 7
+    print(a2.x)
 
 if __name__ == '__main__': main()
