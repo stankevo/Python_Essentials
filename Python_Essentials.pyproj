@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{f391c9e7-6589-4436-9de3-3300008d3f57}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>Chap8_mixed_structures.py</StartupFile>
+    <StartupFile>Chap9_creating_a_class.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -110,6 +110,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Chap8_sets.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chap9_creating_a_class.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Exercise Files\Chap01\hello-version.py" />
