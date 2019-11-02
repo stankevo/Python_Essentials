@@ -1,5 +1,5 @@
 import sys
-#test
+#test2
 def func():
     try:
         x = int('foo')
