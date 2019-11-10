@@ -4,9 +4,7 @@ def main():
     print('Create DB connection')
     db = sqlite3.connect('My_DB-API.db')
     cur = db.cursor()
-    cur.execute("""
-        DROP TABLE IF EXISTS my_table
-        """)
+    cur.execute('DROP TABLE IF EXISTS my_table')
     cur.execute("""
         CREATE TABLE my_table (
             id INTEGER PRIMARY KEY,
