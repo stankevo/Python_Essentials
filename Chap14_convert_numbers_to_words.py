@@ -1,4 +1,4 @@
-# fix: 20: twenty-zero
+import datetime
 
 class numToWord:
     def __init__(self, n = None):
@@ -15,11 +15,10 @@ class numToWord:
             20: 'twenty', 30: 'thirty',  40: 'forty',  50: 'fifty',
             60: 'sixty',  70: 'seventy', 80: 'eighty', 90: 'ninety'}
 
-        self._word = self.getword(n)
-
+        self._word = self._getword(n)
 
     def __repr__(self):
-        return f'{self._word}'
+        return f'{self._number} - {self._word}'
 
     def number(self, n = None):
         if n: self._number = n
@@ -28,7 +27,7 @@ class numToWord:
     def word(self):
         return self._word
 
-    def getword(self, n):
+    def _getword(self, n):
         if n < 0 or n >= 100:
             raise TypeError(f'Expected value between 0 and 99, got {n}.')
         if n >= 0 and n <= 19:
@@ -42,17 +41,37 @@ class numToWord:
         return w
 
 def main():
-    x = 100
+    x = 1
     try:
         a = numToWord(x)
         print(a)
         b = a.number()
         c = a.word()
-        print(b, a)
+        print(b, c)
     except TypeError as e:
         print(f'Error: {e}')
     # test
-    for i in range(100):
-        print(f'{i}: {numToWord(i)}')
-    
+  ##  for i in range(100):
+  ##      print(f'{i}: {numToWord(i).word()}')
+
+    now = datetime.datetime.now()
+
+    try:        
+        tw = timeToWord(now.time())
+        print(tw)
+    except TypeError as e:
+        print(f'TypeError: {e}')
+
+class timeToWord:
+    def __init__(self, t = None):
+        if isinstance(t, datetime.time): 
+            self._time = t
+            self._hour = t.hour
+            self._minutes = t.minute
+        else: raise TypeError(f'timeToWord expects a value of type datetime.time as an agrument, got {type(t)}.')
+
+    def __repr__(self):
+        return f'time: {self._time}, hour: {self._hour}, minutes: {self._minutes}'
+
+      
 if __name__ == '__main__': main()
