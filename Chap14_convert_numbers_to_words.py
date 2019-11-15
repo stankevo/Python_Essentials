@@ -1,3 +1,5 @@
+# bug: 00:01:00 - fifty-nine past midnight
+
 import datetime
 
 class numToWord:
@@ -40,6 +42,59 @@ class numToWord:
             w = self._dictTens[a] + '-' + self._dict20[b]
         return w
 
+
+class timeToWord:
+    def __init__(self, t = None):
+        if isinstance(t, datetime.time): 
+            self._time = t
+            self._hour = t.hour
+            self._minutes = t.minute
+        else: raise TypeError(f'timeToWord expects a value of type datetime.time as an agrument, got {type(t)}.')
+        
+        self._tword = self._getWordFromTime(self._hour, self._minutes)
+    
+    def _hourToWord(self, h):
+        if h == 0:
+            w = 'midnight'
+        elif h == 12:
+            w = 'noon'
+        else:
+            w = numToWord(h % 12).word()
+        return w
+
+    def _minToWord(self, m):
+        if m == 15:
+            w = 'quarter'
+        elif m == 30:
+            w = 'half'
+        else:
+            w = numToWord(m).word()
+        return w
+
+
+    def _getWordFromTime(self, hour, minutes):
+        wHour = self._hourToWord(hour)
+        nextHour = 0 if hour == 23 else hour + 1
+        wNextHour = self._hourToWord(nextHour)
+        rMinutes = 60 - minutes
+
+        wMinutes = self._minToWord(minutes)
+        rMinutes = 60 - minutes
+        wrMinutes = self._minToWord(rMinutes)
+
+        if minutes == 0:
+            wTime = wHour if (hour % 12) == 0 else  wHour + " o'clock" 
+        elif minutes <= 30:
+            wTime = wMinutes + ' past ' + wHour
+        else:
+            wTime = wrMinutes + ' till ' + wNextHour
+        return wTime
+
+
+    def __repr__(self):
+        return self._tword
+
+
 def main():
     x = 1
     try:
@@ -62,52 +117,23 @@ def main():
     except TypeError as e:
         print(f'TypeError: {e}')
 
-class timeToWord:
-    def __init__(self, t = None):
-        if isinstance(t, datetime.time): 
-            self._time = t
-            self._hour = t.hour
-            self._minutes = t.minute
-        else: raise TypeError(f'timeToWord expects a value of type datetime.time as an agrument, got {type(t)}.')
-        
-        self._tword = self._getWordFromTime(self._hour, self._minutes)
+    # test time
+    t1 = datetime.time(0,0)
+    t2 = timeToWord(t1)
+    print(t2)
 
+    l = ((0, 0), (0, 1), (11, 0), (12, 0), (13, 0), (12, 29), (12, 30),
+             (12, 31), (12, 15), (12, 30), (12, 45), (11, 59), (23, 15), 
+             (23, 59), (12, 59), (13, 59)
+            )
 
-    def _getWordFromTime(self, hour, minutes):
-        if hour == 0:
-            wHour = 'midnight'
-        elif hour == 12:
-            wHour = 'noon'
-        else:
-            wHour = numToWord(hour%12).word()
+    tests = list()
+    for i in l:
+        tests.append(datetime.time(i[0], i[1]))
 
-        if minutes in (15, 45):
-            wMinutes = 'quarter'
-        elif minutes == 30:
-            wMinutes = 'half'
-        else:
-            wMinutes = numToWord(minutes).word()
+    for i in tests:
+        print(f'{i} - {timeToWord(i)}')
 
-        if minutes == 0:
-            wTime = wHour
-        
-        elif minutes <= 30:
-            wTime = wMinutes + ' past ' + wHour
-        
-        else:
-            nextHour = 0 if hour == 23 else hour + 1
-            if nextHour == 0:
-                wnextHour = 'midnight'
-            elif nextHour == 12:
-                wnextHour = 'noon'
-            else: wnextHour = numToWord(nextHour%12).word()
-            wTime = wMinutes + ' til ' + wnextHour
-
-        return wTime
-
-
-    def __repr__(self):
-        return self._tword
 
 
 if __name__ == '__main__': main()
