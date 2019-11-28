@@ -1,26 +1,19 @@
-# bug: 00:01:00 - fifty-nine past midnight
-
 import datetime
 
 class numToWord:
-    def __init__(self, n = None):
-        self._number = n
-        self._word = 'None'
-
-        self._dict20 = {
+    _dict20 = {
             0: 'zero',      1: 'one',      2: 'two',        3: 'three',     4: 'four', 
             5: 'five',      6: 'six',      7: 'seven',      8: 'eight',     9: 'nine',
             10: 'ten',     11: 'eleven',  12: 'twelve',    13: 'thirteen', 14: 'fourteen',
             15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen'}
 
-        self._dictTens = {
+    _dictTens = {
             20: 'twenty', 30: 'thirty',  40: 'forty',  50: 'fifty',
             60: 'sixty',  70: 'seventy', 80: 'eighty', 90: 'ninety'}
 
-        self._word = self._getword(n)
-
-    def __repr__(self):
-        return f'{self._number} - {self._word}'
+    def __init__(self, n = None):
+        self._number = n
+        self._word = self.getword(n)
 
     def number(self, n = None):
         if n: self._number = n
@@ -29,7 +22,7 @@ class numToWord:
     def word(self):
         return self._word
 
-    def _getword(self, n):
+    def getword(self, n):
         if n < 0 or n >= 100:
             raise TypeError(f'Expected value between 0 and 99, got {n}.')
         if n >= 0 and n <= 19:
@@ -42,6 +35,9 @@ class numToWord:
             w = self._dictTens[a] + '-' + self._dict20[b]
         return w
 
+    def __repr__(self):
+        return f'{self.number()} - {self.word()}'
+
 
 class timeToWord:
     def __init__(self, t = None):
@@ -49,11 +45,10 @@ class timeToWord:
             self._time = t
             self._hour = t.hour
             self._minutes = t.minute
-        else: raise TypeError(f'timeToWord expects a value of type datetime.time as an agrument, got {type(t)}.')
-        
-        self._tword = self._getWordFromTime(self._hour, self._minutes)
+        else: raise TypeError(f'timeToWord expects a value of type datetime.time as an agrument, got {type(t)}.')  
+        self._tword = self.getWordFromTime(self._hour, self._minutes)
     
-    def _hourToWord(self, h):
+    def hourToWord(self, h):
         if h == 0:
             w = 'midnight'
         elif h == 12:
@@ -62,7 +57,7 @@ class timeToWord:
             w = numToWord(h % 12).word()
         return w
 
-    def _minToWord(self, m):
+    def minToWord(self, m):
         if m == 15:
             w = 'quarter'
         elif m == 30:
@@ -72,15 +67,15 @@ class timeToWord:
         return w
 
 
-    def _getWordFromTime(self, hour, minutes):
-        wHour = self._hourToWord(hour)
+    def getWordFromTime(self, hour, minutes):
+        wHour = self.hourToWord(hour)
         nextHour = 0 if hour == 23 else hour + 1
-        wNextHour = self._hourToWord(nextHour)
+        wNextHour = self.hourToWord(nextHour)
         rMinutes = 60 - minutes
 
-        wMinutes = self._minToWord(minutes)
+        wMinutes = self.minToWord(minutes)
         rMinutes = 60 - minutes
-        wrMinutes = self._minToWord(rMinutes)
+        wrMinutes = self.minToWord(rMinutes)
 
         if minutes == 0:
             wTime = wHour if (hour % 12) == 0 else  wHour + " o'clock" 
@@ -109,7 +104,7 @@ def main():
     #  for i in range(100):
     #      print(f'{i}: {numToWord(i).word()}')
 
-    now = datetime.datetime.now()
+    now =  datetime.datetime.now()
 
     try:        
         tw = timeToWord(now.time())
